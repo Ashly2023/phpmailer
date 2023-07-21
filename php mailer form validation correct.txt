@@ -1,0 +1,6 @@
+html page:
+ <script src="js/jquery.validate.min.js"></script> 
+ <script src="js/contactform.js"></script>
+<form id="enquire-form" class="white-popup-block mfp-hide quick" action="contactform.php" method="POST">     
+ee codeill action, method mathrame mattavollu
+id, name kodukkanam
