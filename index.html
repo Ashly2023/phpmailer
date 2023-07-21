@@ -127,7 +127,7 @@
                 <div class="header-quick-item">
                     <ul>
                         <li> <a href="javascript:void(0)" class="link-title"> Rent </a> </li>
-                        <li> <a href="#enquire-form" class="popup-with-form"> Contact Us </a> </li>
+                        <li><a href="#enquire-form" class="popup-with-form">Contact Us</a> </li>
                         <li> <a href="https://www.booking.com/Share-x5CwRA" target="_blank"> Book now </a> </li>
                     </ul>
                 </div>
@@ -135,8 +135,8 @@
                     <ul>
                         <li> <a href="#home"> Home </a> </li>
                         <li> <a href="#about"> About Us </a> </li>
-                        <!-- <li> <a href="#enquire-form" class="popup-with-form"> Contact Us </a> </li> -->
-                        <li> <a href="#"> Careers </a> </li>
+                        <!-- <a href="contact.html"> Contact Us </a> </li>  -->
+                        <li> <a href="#">Careers </a> </li>
                         <li> <a href="faq.html"> FAQS </a> </li>
                     </ul>
 
@@ -552,8 +552,8 @@
     </footer>
 
     <!-- form itself -->
-    <form id="enquire-form" class="white-popup-block mfp-hide">
-        <div class="form-row">
+    <form id="enquire-form" class="white-popup-block mfp-hide quick" action="contactform.php" method="POST">     
+           <div class="form-row">
             <div class="form-left" style="background-image: url(images/popup-bg.webp);"></div>
             <div class="form-right">
                 <div class="inner-content">
@@ -562,32 +562,32 @@
                     </h3>
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-6 mb-3">
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 mb-3">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 mb-3">
-                            <input type="tel" class="form-control" placeholder="Phone Number">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 mb-3">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" class="form-control" id="subject" name="subject"  placeholder="Subject">
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 mb-3">
-                            <textarea class="form-control" rows="3" placeholder="Comments"></textarea>
+                            <textarea class="form-control" rows="3" id="comments" name="comments" placeholder="Comments"></textarea>
                         </div>
                         <div class="col-12">
                             <div class="button-item">
-                                <span class="button_circle"></span>
-                                <input type="button" class="form-button button-inner" value="Submit Now">
+                                <span class="button_circle"></span><button >Submit</button>
+                                <!-- <input type="button" class="form-button button-inner" value="Submit Now"> -->
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </form>
-
+            </div> 
+        </div> 
+    </form> 
+    <div id="contact_msg"></div> 
     <div class="watsup-fixed">
         <a target="_blank" href="https://api.whatsapp.com/send?phone=971566690222">
             <img src="images/whatsapp-fixed.svg" alt="">
@@ -595,16 +595,19 @@
     </div>
 
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script> 
+    <script src="js/contactform.js"></script>
     <script src="js/jquery-migrate.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/jquery.paroller.js"></script>
+
     <script src="js/smoothscroll.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/tilt.jquery.min.js"></script>
     <script src="js/theme-script.js"></script>
-
+    
     <script>
         $(window).on('load', function () {
             $('.tilt').tilt({
